@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="68" viewBox="0 0 52 68">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Forme_19" data-name="Forme 19" class="cls-1" d="M11311,7085.02V7073h-4v12.02h4Zm0-16.02v-12.02h-4V7069h4Zm0-16v-12.02h-4V7053h4Zm-16,48.02h16V7097h-16v4.02Zm-32-12.02h20v8h-4v4.02h4V7105h4v-3.98h4V7097h-4v-8h20v-3.98h-44V7089Zm0-16h44v-4h-44v4Zm0-20v3.98h44V7053h-44Zm-4,48.02h16V7097h-16v4.02Zm12-24h-4V7081h4v-3.98Zm0-16.02h-4v4h4v-4Zm-4-12.02h4V7045h-4v3.98Zm40-11.98h-44v3.98h44V7037Zm-48,36v12.02h4V7073h-4Zm0-16.02V7069h4v-12.02h-4Zm0-16V7053h4v-12.02h-4Z" transform="translate(-11259 -7037)"/>
+</svg>
