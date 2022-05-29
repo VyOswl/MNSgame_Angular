@@ -1,61 +1,63 @@
 <main>
       <div class="container" id="container">
             <div class="form-container sign-up-container">
-                  <form [formGroup]="formControl">
+                  <form [formGroup]="signUpFormControl">
                         <h1>Inscription</h1> <br>
                         <mat-form-field appearance="fill">
                               <input formControlName="lastname" type="text" placeholder="Nom" matInput />
-                              <mat-error *ngIf="formControl.get('lastname')?.hasError('required')">
+                              <mat-error *ngIf="signUpFormControl.get('lastname')?.hasError('required')">
                                     Le nom est <strong>obligatoire</strong>
                               </mat-error>
-                              <mat-error *ngIf="formControl.get('lastname')?.hasError('minlength')">
+                              <mat-error *ngIf="signUpFormControl.get('lastname')?.hasError('minlength')">
                                     Le nom doit avoir <strong>au moins 3 lettres</strong>
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
                               <input formControlName="firstname" type="text" placeholder="Prénom" matInput />
-                              <mat-error *ngIf="formControl.get('firstname')?.hasError('required')">
+                              <mat-error *ngIf="signUpFormControl.get('firstname')?.hasError('required')">
                                     Le prénom est <strong>obligatoire</strong>
                               </mat-error>
-                              <mat-error *ngIf="formControl.get('firstname')?.hasError('minlength')">
+                              <mat-error *ngIf="signUpFormControl.get('firstname')?.hasError('minlength')">
                                     Le prénom doit avoir <strong>au moins 3 lettres</strong>
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
                               <input formControlName="email" type="email" placeholder="Email" matInput />
-                              <mat-error *ngIf="formControl.get('email')?.hasError('email')">
+                              <mat-error *ngIf="signUpFormControl.get('email')?.hasError('email')">
                                     Veuillez fournir une <strong>adresse mail correcte</strong>
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
                               <input formControlName="password" type="password" placeholder="Mot de passe"
                                     autocomplete="on" matInput />
-                              <mat-error *ngIf="formControl.get('password')?.hasError('required')">
+                              <mat-error *ngIf="signUpFormControl.get('password')?.hasError('required')">
                                     Le mot de passe est <strong>obligatoire</strong>
                               </mat-error>
-                              <mat-error *ngIf="formControl.get('password')?.hasError('minlength')">
+                              <mat-error *ngIf="signUpFormControl.get('password')?.hasError('minlength')">
                                     Le mot de passe doit avoir <strong>au moins 6 lettres</strong>
                               </mat-error>
                         </mat-form-field>
                         <button>S'incrire</button>
                   </form>
             </div>
+
+
             <div class="form-container sign-in-container">
-                  <form [formGroup]="formControl" (submit)="onSignIn()">
+                  <form [formGroup]="signInFormControl" (submit)="onSignIn()">
                         <h1>Connexion</h1> <br>
                         <mat-form-field appearance="fill">
                               <input formControlName="email" type="email" placeholder="Email" matInput />
-                              <mat-error *ngIf="formControl.get('email')?.hasError('email')">
+                              <mat-error *ngIf="signInFormControl.get('email')?.hasError('email')">
                                     Veuillez fournir une <strong>adresse mail correcte</strong>
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
                               <input formControlName="password" type="password" placeholder="Mot de passe"
                                     autocomplete="on" matInput />
-                              <mat-error *ngIf="formControl.get('password')?.hasError('required')">
+                              <mat-error *ngIf="signInFormControl.get('password')?.hasError('required')">
                                     Le mot de passe est <strong>obligatoire</strong>
                               </mat-error>
-                              <mat-error *ngIf="formControl.get('password')?.hasError('minlength')">
+                              <mat-error *ngIf="signInFormControl.get('password')?.hasError('minlength')">
                                     Le mot de passe doit avoir <strong>au moins 6 lettres</strong>
                               </mat-error>
                         </mat-form-field>
@@ -63,6 +65,10 @@
                         <button type="submit">S'identifier</button>
                   </form>
             </div>
+
+
+
+
             <div class="overlay-container">
                   <div class="overlay">
                         <div class="overlay-panel overlay-left">
@@ -70,6 +76,7 @@
                               <p>Avez-vous déjà un compte?</p>
                               <button class="ghost" id="signIn" (click)="callSignIn()">S'identifier</button>
                         </div>
+
                         <div class="overlay-panel overlay-right">
                               <h1>Bienvenue</h1>
                               <p>Voulez-vous créer un compte chez MNS Games?</p>

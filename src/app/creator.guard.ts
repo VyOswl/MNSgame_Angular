@@ -18,7 +18,7 @@ export class CreatorGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
     if (this.tokenIdentification.user.value != null &&
-      this.tokenIdentification.user.value.droits.includes('ROLE_CREATOR')) {
+      this.tokenIdentification.user.value.droits.includes('CREATOR')) {
       return true;
     }
 

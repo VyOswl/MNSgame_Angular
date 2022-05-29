@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TokenIdentificationService } from './token-identification.service';
 
 @Component({
   selector: 'app-root',
@@ -7,21 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MNSgame_Angular';
-  public nom: string = "";
+  public email: string = "";
 
   constructor(
-    //private tokenIdentification: TokenIdentificationService
+    private tokenIdentification: TokenIdentificationService
   ) { }
 
   ngOnInit() {
-    // this.tokenIdentification.utilisateur.subscribe(
-    //   utilisateur => {
-    //     if (utilisateur != null) {
-    //       this.nom = utilisateur.sub;
-    //     } else {
-    //       this.nom = "";
-    //     }
-    //   }
-    // );
+    this.tokenIdentification.user.subscribe(
+      user => {
+        if (user != null) {
+          this.email = user.sub;
+        } else {
+          this.email = "";
+        }
+      }
+    );
   }
 }

@@ -13,9 +13,14 @@ import { TokenIdentificationService } from '../token-identification.service';
 })
 export class PageConnectionComponent implements OnInit {
 
-  public formControl: FormGroup = this.formBuilder.group({
+  public signUpFormControl: FormGroup = this.formBuilder.group({
     "firstname": ["", [Validators.required, Validators.minLength(3)]],
     "lastname": ["", [Validators.required, Validators.minLength(3)]],
+    "email": ["", [Validators.required, Validators.email]],
+    "password": ["", [Validators.required, Validators.minLength(6)]]
+  });
+
+  public signInFormControl: FormGroup = this.formBuilder.group({
     "email": ["", [Validators.required, Validators.email]],
     "password": ["", [Validators.required, Validators.minLength(6)]]
   });
@@ -39,10 +44,10 @@ export class PageConnectionComponent implements OnInit {
   }
 
   onSignIn() {
-    if (this.formControl.valid) { //to check if the form is valid without sending it to the server
-      const utilisateur = this.formControl.value;
+    if (this.signInFormControl.valid) { //to check if the form is valid without sending it to the server
+      const utilisateur = this.signInFormControl.value;
 
-      this.client.post('http://' + environment.serverAddress + '/connexion', utilisateur)
+      this.client.post('http://' + environment.serverAddress + '/connection', utilisateur)
         .subscribe((response: any) => {
           if (response.erreur) {
             alert(response.erreur);
