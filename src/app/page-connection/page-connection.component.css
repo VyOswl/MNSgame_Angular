@@ -12,7 +12,15 @@ main {
       flex-direction: column;
       font-family: 'Montserrat', sans-serif;
       height: 100vh;
-      margin: -50px 0 50px;
+      margin-top: -5vh;
+}
+
+.globeBG {
+      position: absolute;
+      margin-top: -0.8vh;
+      z-index: 1;
+      height: 700px;
+
 }
 
 h1 {
