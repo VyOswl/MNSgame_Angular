@@ -39,7 +39,6 @@ export class PageConnectionComponent implements OnInit {
   }
 
   onSignIn() {
-
     if (this.formControl.valid) { //to check if the form is valid without sending it to the server
       const utilisateur = this.formControl.value;
 
@@ -49,8 +48,6 @@ export class PageConnectionComponent implements OnInit {
             alert(response.erreur);
           } else {
             localStorage.setItem('token', response.token);
-            //location.href = '/';
-            //alert('Connexion réussie');
             this.tokenIdentification.refreshToken()
             this.router.navigateByUrl("");
           }

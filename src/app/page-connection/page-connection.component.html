@@ -28,7 +28,8 @@
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                              <input formControlName="password" type="password" placeholder="Mot de passe" matInput />
+                              <input formControlName="password" type="password" placeholder="Mot de passe"
+                                    autocomplete="on" matInput />
                               <mat-error *ngIf="formControl.get('password')?.hasError('required')">
                                     Le mot de passe est <strong>obligatoire</strong>
                               </mat-error>
@@ -49,7 +50,8 @@
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                              <input formControlName="password" type="password" placeholder="Mot de passe" matInput />
+                              <input formControlName="password" type="password" placeholder="Mot de passe"
+                                    autocomplete="on" matInput />
                               <mat-error *ngIf="formControl.get('password')?.hasError('required')">
                                     Le mot de passe est <strong>obligatoire</strong>
                               </mat-error>

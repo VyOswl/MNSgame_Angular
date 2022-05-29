@@ -9,20 +9,20 @@ export class TokenIdentificationService {
   constructor() { }
 
   //Need application to load new token while login with another user
-  public utilisateur: BehaviorSubject<any> = new BehaviorSubject(null);
+  public user: BehaviorSubject<any> = new BehaviorSubject(null);
 
   // change function from get token body to get token of Connected User
   public refreshToken() { //extractionToken
     if (localStorage.getItem("token") != null) {
       const token: any = localStorage.getItem("token");
       try {
-        this.utilisateur.next(JSON.parse(atob(token.split(".")[1])));
+        this.user.next(JSON.parse(atob(token.split(".")[1])));
         //return JSON.parse(atob(token.split(".")[1]));
       } catch (e) {
-        this.utilisateur.next(null);
+        this.user.next(null);
       }
     } else {
-      this.utilisateur.next(null);
+      this.user.next(null);
     }
     //return null;
   }
