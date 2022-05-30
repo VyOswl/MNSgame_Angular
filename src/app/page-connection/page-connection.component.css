@@ -23,6 +23,10 @@ main {
 
 }
 
+.input {
+      width: max-content;
+}
+
 h1 {
       font-weight: bold;
       margin: 0;
@@ -128,7 +132,7 @@ input {
 
 .sign-up-container {
       left: 0;
-      width: 50%;
+      width: 0%;
       opacity: 0;
       z-index: 1;
 }
@@ -235,29 +239,4 @@ input {
       margin: 0 5px;
       height: 40px;
       width: 40px;
-}
-
-footer {
-      background-color: #222;
-      color: #fff;
-      font-size: 14px;
-      bottom: 0;
-      position: fixed;
-      left: 0;
-      right: 0;
-      text-align: center;
-      z-index: 999;
-}
-
-footer p {
-      margin: 10px 0;
-}
-
-footer i {
-      color: red;
-}
-
-footer a {
-      color: #3c97bf;
-      text-decoration: none;
 }

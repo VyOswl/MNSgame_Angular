@@ -9,7 +9,8 @@ import { TokenIdentificationService } from '../token-identification.service';
 @Component({
   selector: 'app-page-connection',
   templateUrl: './page-connection.component.html',
-  styleUrls: ['./page-connection.component.css']
+  styleUrls: ['./page-connection.component.css'],
+  //encapsulation: ViewEncapsulation.None
 })
 export class PageConnectionComponent implements OnInit {
 
@@ -45,16 +46,16 @@ export class PageConnectionComponent implements OnInit {
 
   onSignIn() {
     if (this.signInFormControl.valid) { //to check if the form is valid without sending it to the server
-      const utilisateur = this.signInFormControl.value;
+      const user = this.signInFormControl.value;
 
-      this.client.post('http://' + environment.serverAddress + '/connection', utilisateur)
+      this.client.post('http://' + environment.serverAddress + '/connection', user)
         .subscribe((response: any) => {
           if (response.erreur) {
             alert(response.erreur);
           } else {
             localStorage.setItem('token', response.token);
             this.tokenIdentification.refreshToken()
-            this.router.navigateByUrl("");
+            this.router.navigateByUrl('/users-management');
           }
         });
     }

@@ -12,12 +12,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { PageUsersManagementComponent } from './page-users-management/page-users-management.component';
+import { DashboardCreatorComponent } from './dashboard-creator/dashboard-creator.component';
+import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageConnectionComponent,
-    PageUsersManagementComponent
+    PageUsersManagementComponent,
+    DashboardCreatorComponent,
+    DashboardUserComponent
   ],
   imports: [
     BrowserModule,

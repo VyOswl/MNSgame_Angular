@@ -23,7 +23,7 @@ export class TokenInterceptor implements HttpInterceptor {
     let enTete;
     if (localStorage.getItem('token') != null) {
 
-      const timestamp = this.tokenIdentification.utilisateur.value.exp;
+      const timestamp = this.tokenIdentification.user.value.exp;
       const dateExpiration = new Date(timestamp * 1000);
 
       if (dateExpiration < new Date()) {

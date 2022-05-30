@@ -4,7 +4,7 @@
                   <form [formGroup]="signUpFormControl">
                         <h1>Inscription</h1> <br>
                         <mat-form-field appearance="fill">
-                              <input formControlName="lastname" type="text" placeholder="Nom" matInput />
+                              <input class="input" formControlName="lastname" type="text" placeholder="Nom" matInput />
                               <mat-error *ngIf="signUpFormControl.get('lastname')?.hasError('required')">
                                     Le nom est <strong>obligatoire</strong>
                               </mat-error>
@@ -13,7 +13,8 @@
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                              <input formControlName="firstname" type="text" placeholder="Prénom" matInput />
+                              <input class="input" formControlName="firstname" type="text" placeholder="Prénom"
+                                    matInput />
                               <mat-error *ngIf="signUpFormControl.get('firstname')?.hasError('required')">
                                     Le prénom est <strong>obligatoire</strong>
                               </mat-error>
@@ -22,13 +23,13 @@
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                              <input formControlName="email" type="email" placeholder="Email" matInput />
+                              <input class="input" formControlName="email" type="email" placeholder="Email" matInput />
                               <mat-error *ngIf="signUpFormControl.get('email')?.hasError('email')">
                                     Veuillez fournir une <strong>adresse mail correcte</strong>
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                              <input formControlName="password" type="password" placeholder="Mot de passe"
+                              <input class="input" formControlName="password" type="password" placeholder="Mot de passe"
                                     autocomplete="on" matInput />
                               <mat-error *ngIf="signUpFormControl.get('password')?.hasError('required')">
                                     Le mot de passe est <strong>obligatoire</strong>
@@ -46,13 +47,13 @@
                   <form [formGroup]="signInFormControl" (submit)="onSignIn()">
                         <h1>Connexion</h1> <br>
                         <mat-form-field appearance="fill">
-                              <input formControlName="email" type="email" placeholder="Email" matInput />
+                              <input class="input" formControlName="email" type="email" placeholder="Email" matInput />
                               <mat-error *ngIf="signInFormControl.get('email')?.hasError('email')">
                                     Veuillez fournir une <strong>adresse mail correcte</strong>
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                              <input formControlName="password" type="password" placeholder="Mot de passe"
+                              <input class="input" formControlName="password" type="password" placeholder="Mot de passe"
                                     autocomplete="on" matInput />
                               <mat-error *ngIf="signInFormControl.get('password')?.hasError('required')">
                                     Le mot de passe est <strong>obligatoire</strong>
@@ -85,16 +86,6 @@
                   </div>
             </div>
       </div>
-
-      <footer>
-            <p>
-                  Created by
-                  <a target="_blank" href="https://www.linkedin.com/in/sara-el-boukhliki-b443b2221/">Sara EL
-                        BOUKHLIKI</a>
-                  and
-                  <a target="_blank" href="https://www.linkedin.com/in/vyphano/"> Vy PHAN </a>
-            </p>
-      </footer>
 
       <img src="assets/images/icons/minimal_globe.svg" class="globeBG">
 </main>
