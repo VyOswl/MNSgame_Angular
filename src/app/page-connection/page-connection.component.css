@@ -11,21 +11,28 @@ main {
       align-items: center;
       flex-direction: column;
       font-family: 'Montserrat', sans-serif;
-      height: 100vh;
-      margin-top: -5vh;
+      height: 120%;
+      margin-top: -1%;
+}
+
+.logomns {
+      width: 500px;
+      margin-top: 2%;
+      margin-bottom: 70px;
+      z-index: 2;
 }
 
 .globeBG {
       position: absolute;
-      margin-top: -0.8vh;
-      z-index: 1;
-      height: 700px;
+      margin-top: 7%;
+      height: 750px;
 
 }
 
-.input {
+.input_field {
       width: fit-content;
 }
+
 
 h1 {
       font-weight: bold;
@@ -109,7 +116,7 @@ input {
       overflow: hidden;
       width: 768px;
       max-width: 100%;
-      min-height: 480px;
+      min-height: 600px;
 }
 
 .form-container {
@@ -132,7 +139,7 @@ input {
 
 .sign-up-container {
       left: 0;
-      width: 0%;
+      width: 50%;
       opacity: 0;
       z-index: 1;
 }
@@ -239,4 +246,29 @@ input {
       margin: 0 5px;
       height: 40px;
       width: 40px;
+}
+
+footer {
+      background-color: #222;
+      color: #fff;
+      font-size: 14px;
+      bottom: 0;
+      position: fixed;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 999;
+}
+
+footer p {
+      margin: 10px 0;
+}
+
+footer i {
+      color: red;
+}
+
+footer a {
+      color: #3c97bf;
+      text-decoration: none;
 }

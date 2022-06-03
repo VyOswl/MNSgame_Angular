@@ -23,15 +23,15 @@ export class TokenInterceptor implements HttpInterceptor {
     let enTete;
     if (localStorage.getItem('token') != null) {
 
-      const timestamp = this.tokenIdentification.user.value.exp;
-      const dateExpiration = new Date(timestamp * 1000);
+      // const timestamp = this.tokenIdentification.user.value.exp;
+      // const dateExpiration = new Date(timestamp * 1000);
 
-      if (dateExpiration < new Date()) {
-        this.tokenIdentification.onTokenExprired();
-        this.router.navigate(['/connection']);
-        console.log('token expired');
-        return EMPTY;
-      }
+      // if (dateExpiration < new Date()) {
+      //   this.tokenIdentification.onTokenExprired();
+      //   this.router.navigate(['/connection']);
+      //   console.log('token expired');
+      //   return EMPTY;
+      // }
 
       enTete = new HttpHeaders({
         'Access-Control-Allow-Origin': '*',

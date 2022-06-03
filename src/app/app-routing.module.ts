@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '', component: PageConnectionComponent },
   { path: 'connection', component: PageConnectionComponent },
   { path: 'creator/dashboard', component: DashboardCreatorComponent },
-  { path: 'users-management', component: PageUsersManagementComponent }
+  { path: 'admin/users-management', component: PageUsersManagementComponent }
 ];
 
 @NgModule({

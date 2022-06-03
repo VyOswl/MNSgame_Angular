@@ -18,12 +18,12 @@ export class PageConnectionComponent implements OnInit {
     "firstname": ["", [Validators.required, Validators.minLength(3)]],
     "lastname": ["", [Validators.required, Validators.minLength(3)]],
     "email": ["", [Validators.required, Validators.email]],
-    "password": ["", [Validators.required, Validators.minLength(6)]]
+    "password": ["", [Validators.required, Validators.minLength(3)]]
   });
 
   public signInFormControl: FormGroup = this.formBuilder.group({
     "email": ["", [Validators.required, Validators.email]],
-    "password": ["", [Validators.required, Validators.minLength(6)]]
+    "password": ["", [Validators.required, Validators.minLength(3)]]
   });
 
   constructor(
@@ -55,7 +55,7 @@ export class PageConnectionComponent implements OnInit {
           } else {
             localStorage.setItem('token', response.token);
             this.tokenIdentification.refreshToken()
-            this.router.navigateByUrl('/users-management');
+            this.router.navigateByUrl('/admin/users-management');
           }
         });
     }

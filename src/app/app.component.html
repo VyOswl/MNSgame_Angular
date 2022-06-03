@@ -1,6 +1,30 @@
-<main>
-      <img class="logomns" src="assets/images/icons/logo_mnsGames.svg" alt="logo MNS">
-</main>
+<header>
+      <nav *ngIf="email!= ''" class="container">
+            <input id="nav-toggle" type="checkbox" />
+            <img class="logomns" src="assets/images/icons/logo_mnsGames.svg" alt="logo MNS">
+            <ul class="links">
+                  <li class="list">
+                        <a href="">Gestion Scenarios</a>
+                        <div class="home_underline"></div>
+                  </li>
+                  <li class="list">
+                        <a href="">Gestion Questions</a>
+                        <div class="home_underline"></div>
+                  </li>
+                  <li class="list">
+                        <a href="">Gestion Réponses</a>
+                        <div class="home_underline"></div>
+                  </li>
+                  <button>Espace personelle</button>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+            </label>
+      </nav>
+</header>
+
 <router-outlet></router-outlet>
 
 <footer>

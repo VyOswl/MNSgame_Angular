@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { PageUsersManagementComponent } from './page-users-management/page-users-management.component';
 import { DashboardCreatorComponent } from './dashboard-creator/dashboard-creator.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
+import { TokenInterceptor } from './token.interceptor';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { DashboardUserComponent } from './dashboard-user/dashboard-user.componen
     MatFormFieldModule,
     MatInputModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

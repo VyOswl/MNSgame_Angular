@@ -17,14 +17,12 @@ export class TokenIdentificationService {
       const token: any = localStorage.getItem("token");
       try {
         this.user.next(JSON.parse(atob(token.split(".")[1])));
-        //return JSON.parse(atob(token.split(".")[1]));
       } catch (e) {
         this.user.next(null);
       }
     } else {
       this.user.next(null);
     }
-    //return null;
   }
 
   public onTokenExprired() {

@@ -1,10 +1,12 @@
 <main>
+      <img class="logomns" src="assets/images/icons/logo_mnsGames.svg" alt="logo MNS">
       <div class="container" id="container">
             <div class="form-container sign-up-container">
                   <form [formGroup]="signUpFormControl">
                         <h1>Inscription</h1> <br>
                         <mat-form-field appearance="fill">
-                              <input class="input" formControlName="lastname" type="text" placeholder="Nom" matInput />
+                              <input class="input_field" formControlName="lastname" type="text" placeholder="Nom"
+                                    matInput />
                               <mat-error *ngIf="signUpFormControl.get('lastname')?.hasError('required')">
                                     Le nom est <strong>obligatoire</strong>
                               </mat-error>
@@ -13,7 +15,7 @@
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                              <input class="input" formControlName="firstname" type="text" placeholder="Prénom"
+                              <input class="input_field" formControlName="firstname" type="text" placeholder="Prénom"
                                     matInput />
                               <mat-error *ngIf="signUpFormControl.get('firstname')?.hasError('required')">
                                     Le prénom est <strong>obligatoire</strong>
@@ -23,14 +25,15 @@
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                              <input class="input" formControlName="email" type="email" placeholder="Email" matInput />
+                              <input class="input_field" formControlName="email" type="email" placeholder="Email"
+                                    matInput />
                               <mat-error *ngIf="signUpFormControl.get('email')?.hasError('email')">
                                     Veuillez fournir une <strong>adresse mail correcte</strong>
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                              <input class="input" formControlName="password" type="password" placeholder="Mot de passe"
-                                    autocomplete="on" matInput />
+                              <input class="input_field" formControlName="password" type="password"
+                                    placeholder="Mot de passe" autocomplete="on" matInput />
                               <mat-error *ngIf="signUpFormControl.get('password')?.hasError('required')">
                                     Le mot de passe est <strong>obligatoire</strong>
                               </mat-error>
@@ -47,14 +50,15 @@
                   <form [formGroup]="signInFormControl" (submit)="onSignIn()">
                         <h1>Connexion</h1> <br>
                         <mat-form-field appearance="fill">
-                              <input class="input" formControlName="email" type="email" placeholder="Email" matInput />
+                              <input class="input_field" formControlName="email" type="email" placeholder="Email"
+                                    matInput />
                               <mat-error *ngIf="signInFormControl.get('email')?.hasError('email')">
                                     Veuillez fournir une <strong>adresse mail correcte</strong>
                               </mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="fill">
-                              <input class="input" formControlName="password" type="password" placeholder="Mot de passe"
-                                    autocomplete="on" matInput />
+                              <input class="input_field" formControlName="password" type="password"
+                                    placeholder="Mot de passe" autocomplete="on" matInput />
                               <mat-error *ngIf="signInFormControl.get('password')?.hasError('required')">
                                     Le mot de passe est <strong>obligatoire</strong>
                               </mat-error>
@@ -66,9 +70,6 @@
                         <button type="submit">S'identifier</button>
                   </form>
             </div>
-
-
-
 
             <div class="overlay-container">
                   <div class="overlay">

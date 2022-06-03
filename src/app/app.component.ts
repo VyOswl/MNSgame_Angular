@@ -24,5 +24,6 @@ export class AppComponent {
         }
       }
     );
+    this.tokenIdentification.refreshToken();
   }
 }
