@@ -111,19 +111,19 @@
  -->
 
 
-      <div class="wrapper">
-            <div class="cols">
-                  <div *ngFor="let user of userList" class="col" ontouchstart="this.classList.toggle('hover');">
-                        <div class="container">
-                              <div class="front"
+      <div class="user-wrapper">
+            <div class="user-cols">
+                  <div *ngFor="let user of userList" class="user-col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="user-container">
+                              <div class="user-front"
                                     style="background-image: url(https://source.unsplash.com/500x500/?cat)">
-                                    <div class="inner">
+                                    <div class="user-inner">
                                           <p>{{user.firstname}} {{user.lastname}}</p>
                                           <span>Lorem ipsum</span>
                                     </div>
                               </div>
-                              <div class="back">
-                                    <div class="inner">
+                              <div class="user-back">
+                                    <div class="user-inner">
                                           <p>{{user.title}}</p>
                                           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum
                                                 repellat velit quae suscipit c.</p>

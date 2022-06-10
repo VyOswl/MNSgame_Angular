@@ -11,10 +11,18 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
 import { PageUsersManagementComponent } from './page-users-management/page-users-management.component';
 import { DashboardCreatorComponent } from './dashboard-creator/dashboard-creator.component';
 import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
 import { TokenInterceptor } from './token.interceptor';
+import { PagePlaygameComponent } from './page-playgame/page-playgame.component';
+import { PageScenarioBuilderComponent } from './page-scenario-builder/page-scenario-builder.component';
+import { PageQuestionsManagementComponent } from './page-questions-management/page-questions-management.component';
+import { PageThemesManagementComponent } from './page-themes-management/page-themes-management.component';
+import { PageGameManagementComponent } from './page-game-management/page-game-management.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +30,12 @@ import { TokenInterceptor } from './token.interceptor';
     PageConnectionComponent,
     PageUsersManagementComponent,
     DashboardCreatorComponent,
-    DashboardUserComponent
+    DashboardUserComponent,
+    PagePlaygameComponent,
+    PageScenarioBuilderComponent,
+    PageQuestionsManagementComponent,
+    PageThemesManagementComponent,
+    PageGameManagementComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +49,10 @@ import { TokenInterceptor } from './token.interceptor';
     MatButtonModule,
     MatIconModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatMenuModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }],
   bootstrap: [AppComponent]

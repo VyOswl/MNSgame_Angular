@@ -1,0 +1,47 @@
+<main>
+      <h1>LES SCÉNARIOS</h1>
+      <br>
+      <div class="wrapper">
+            <div class="cols">
+                  <div *ngFor="let scenario of scenarioList" class="col" ontouchstart="this.classList.toggle('hover');">
+                        <div class="container" (click)="redirectionPlayingGame(scenario.id)">
+                              <div class="front"
+                                    style="background-image: url(https://source.unsplash.com/500x500/?cat)">
+                                    <div class="inner">
+                                          <p>Scénario #{{scenario.id}}</p>
+                                          <p>{{scenario.name}}</p>
+                                    </div>
+                              </div>
+                              <div class="back">
+                                    <div class="inner">
+                                          <p>{{scenario.description}}</p>
+                                          <p> scénario publié : {{scenario.isPublished}}</p>
+                                    </div>
+                              </div>
+
+
+                              <mat-card-actions>
+                                    <button mat-icon-button [matMenuTriggerFor]="menu"
+                                          aria-label="Example icon-button with a menu">
+                                          <mat-icon>more_horiz</mat-icon>
+                                    </button>
+                                    <mat-menu #menu="matMenu">
+                                          <button (click)="scenarioMoreInformations()" mat-menu-item>
+                                                <mat-icon>info</mat-icon>
+                                                <span>Plus d'informations</span>
+                                          </button>
+                                          <button (click)="onDeleteScenario(scenario.id)" mat-menu-item>
+                                                <mat-icon>delete</mat-icon>
+                                                <span>Supprimer</span>
+                                          </button>
+                                    </mat-menu>
+                              </mat-card-actions>
+                        </div>
+                  </div>
+            </div>
+
+
+            <button (click)="redirectionNewScenario()" class="btn btn-outline-warning btn-lg">Créer un scénario</button>
+      </div>
+      <br><br><br>
+</main>

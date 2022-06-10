@@ -34,13 +34,13 @@ export class PageUsersManagementComponent implements OnInit {
 
 
   refreshUserList() {
-    this.client.get('http://' + environment.serverAddress + '/admin/users-management')
+    this.client.get('http://' + environment.serverAddress + '/admin/list-user')
       .subscribe(response => this.userList = response);
   }
 
 
   onDelUser(id: number) {
-    this.client.delete('http://' + environment.serverAddress + '/admin/delete-user/' + id)
+    this.client.delete('http://' + environment.serverAddress + '/admin/delete-user/:id' + id)
       .subscribe(response =>
         this.refreshUserList());
   }
@@ -49,7 +49,7 @@ export class PageUsersManagementComponent implements OnInit {
   onEditUser(id: number) {
     this.router.navigateByUrl('/edit-user/' + id);
     // ---OU---
-    this.router.navigate(['/edit-user', id]);
+    //this.router.navigate(['/edit-user', id]);
   }
 
 }

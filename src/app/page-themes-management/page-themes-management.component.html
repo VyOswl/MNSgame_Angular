@@ -1,0 +1,76 @@
+<main>
+      <h1>LES THÈMES</h1>
+      <br>
+
+      <!-- /// Affichage des thèmes  -->
+      <div class="theme-wrapper">
+            <div class="theme-cols">
+                  <div *ngFor="let theme of themesList" class="theme-col"
+                        ontouchstart="this.classList.toggle('hover');">
+                        <div class="theme-container">
+                              <div class="front"
+                                    style="background-image: url(https://source.unsplash.com/500x500/?cat)">
+                                    <div class="inner">
+                                          <p>Thème #{{theme.id}}</p>
+                                          <p>{{theme.name}}</p>
+                                    </div>
+                              </div>
+                              <div class="back">
+                                    <div class="inner">
+                                          <p>Media</p>
+                                    </div>
+                              </div>
+                              <mat-card-actions>
+                                    <button mat-icon-button [matMenuTriggerFor]="menu"
+                                          aria-label="Example icon-button with a menu">
+                                          <mat-icon>more_horiz</mat-icon>
+                                    </button>
+                                    <mat-menu #menu="matMenu">
+                                          <button (click)="onEditTheme(theme.id)" mat-menu-item>
+                                                <mat-icon>edit</mat-icon>
+                                                <span>Modifier</span>
+                                          </button>
+                                          <button (click)="onDeleteTheme(theme.id)" mat-menu-item>
+                                                <mat-icon>delete</mat-icon>
+                                                <span>Supprimer</span>
+                                          </button>
+                                    </mat-menu>
+                              </mat-card-actions>
+                        </div>
+                  </div>
+            </div>
+            <br>
+            <button id="theme-button" (click)="newTheme()">
+                  <span>Ajouter un thème</span>
+            </button><br>
+      </div>
+      <!-- Affichage des thèmes //// -->
+
+      <!-- /////// Bloc création de thèmes -->
+      <div id="box" [style.visibility]="containerVisible">
+            <form [formGroup]="themeFormControl">
+                  <mat-form-field appearance="fill">
+                        <p><input id="textInputContent" formControlName="name" type="text" placeholder="Nouveau thème"
+                                    matInput /></p>
+                        <mat-error *ngIf="themeFormControl.get('content')?.hasError('required')">
+                              <strong>Entrer</strong> l'intitulé du thème.
+                        </mat-error>
+                  </mat-form-field>
+            </form>
+            <div id="validationQuestion">
+                  <button id="buttonTheme" (click)="createTheme()">
+                        <mat-icon>check_circle</mat-icon>Valider
+                  </button>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <button id="button" (click)="exitNewTheme()">
+                        <mat-icon>exit_to_app</mat-icon>Fermer
+                  </button>
+            </div>
+      </div>
+      <!--  Bloc création de thèmes ///////-->
+
+
+</main>

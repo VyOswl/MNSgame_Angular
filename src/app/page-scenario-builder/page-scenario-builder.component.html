@@ -1,0 +1,284 @@
+<body id="logic" class="fl">
+      <div id="container">
+            <div id="stage">
+
+                  <div class="info">
+                        <div class="buttons">
+                              <a class="button" href="" target="_blank">
+                                    <img src="assets/images/icons/magnifier.png" alt="" />
+                                    Voir je jeux
+                              </a>
+                        </div>
+
+                        <h2>Editeur de Scénario</h2>
+                        <div class="notranslate">MNS GAMES - Jeux Sérieux</div>
+                  </div>
+
+                  <h2 class="f">
+                        Voici la logique de votre scénario:
+                        <b class="notranslate">Test Scénario 1</b>
+                  </h2>
+
+                  <ul class="tabs clearfix">
+                        <li id="fl">
+                              <a href="#" onclick="selectTab(this); return false;">
+                                    <img src="assets/images/icons/icon_tools.svg" />
+                                    Règles de scénario
+                              </a>
+                        </li>
+                  </ul>
+
+                  <form id="logicRules" name="logicRules" class="onePage">
+                        <div id="fieldLogic">
+                              <div id="fieldRulesWarning" class="norules center hide">
+                                    <h3>
+                                          <b>Eh ben</b>
+                                          Ce scénario n'a aucun de règles !
+                                    </h3>
+                                    <a href="#" class="button positive" onclick="addFieldRule(); return false;">
+                                          <img src="assets/images/icons/add.png" alt="" />
+                                          Ajouter une règle
+                                    </a>
+                              </div>
+
+                              <div id="fieldRulesTop" class="">
+                                    <h3>Définir les questions chaînée </h3>
+
+                                    <ul id="fieldRules" class="rules">
+                                          <li id="FieldRule_1" class=" ">
+                                                <table cellspacing="0">
+                                                      <tr>
+                                                            <td class="num">
+                                                                  <a class="index notranslate">1</a>
+                                                                  <a class="warning"
+                                                                        onclick="Lightbox.showUrl('', function(){}, 'error'); return false;">!</a>
+                                                                  <a class="choiceWarning"
+                                                                        onclick="Lightbox.showUrl('', function(){}, 'error'); return false;">!</a>
+                                                            </td>
+                                                            <td>
+                                                                  <p id="FieldRules_1_Condition_1_Condition">
+                                                                        Si
+                                                                        <a id="FieldRules_1_Condition_1_FieldName"
+                                                                              type="entryInfo" rev="dd4" href="#"
+                                                                              style="width:190px"
+                                                                              class="dropdown SL_split dropdown_list_Fields"
+                                                                              onmousedown="showDropdown(event, this); return false;">
+
+                                                                              <span class="notranslate">
+                                                                                    Choisir une question
+                                                                              </span>
+
+                                                                              <b>
+                                                                                    <span
+                                                                                          class="notranslate">radio</span>
+                                                                              </b>
+                                                                        </a>
+
+                                                                        <a id="FieldRules_1_Condition_1_Filter"
+                                                                              rev="dd1"
+                                                                              class="dropdown SL_split dropdown_list_Conditions"
+                                                                              type="" href="#"
+                                                                              onmousedown="showDropdown(event, this); return false;">
+                                                                              <em class='positive'>est</em>
+                                                                        </a>
+
+                                                                        <span class="spanValue">
+                                                                              <input id="FieldRules_1_Condition_1_Value"
+                                                                                    name="FieldRules_1_Condition_1_Value"
+                                                                                    onmouseup="rb_update(this);"
+                                                                                    onkeyup="rb_update(this);"
+                                                                                    onchange="rb_update(this);"
+                                                                                    class="text value hide SL_split"
+                                                                                    type="text" value="Other" />
+
+                                                                              <img class="datepick"
+                                                                                    src="icons/icon_calendar.svg"
+                                                                                    alt="radio" />
+
+                                                                              <a href="#" class="tooltip SL_split"
+                                                                                    title="Acceptable Date Formats"
+                                                                                    rel="In addition to entering the date using the datepicker or MM/DD/YYYY format, you can also use human readable relative date formats like 'Today', '-7 days', and 'last Monday' for this input.">
+                                                                                    Other Date Formats
+                                                                              </a>
+                                                                        </span>
+
+                                                                        <a id="FieldRules_1_Condition_1_ChoiceValue"
+                                                                              type="field4" rev="dd11"
+                                                                              onmousedown="showDropdown(event, this); return false;"
+                                                                              class="dropdown  SL_split dropdown_list_Choices"
+                                                                              href="#" style="width:152px">
+                                                                              <span class="notranslate">Autre</span>
+                                                                              <b class="notranslate">radio</b>
+                                                                        </a>
+
+                                                                        <em id="FieldRules_1_Condition_1_ChoiceCheckboxValue"
+                                                                              class="hide SL_split"
+                                                                              style="font-style:normal">
+                                                                              checked, &nbsp;
+                                                                        </em>
+
+
+                                                                  </p>
+
+                                                                  <br />
+
+                                                                  <p>
+                                                                        <span class="indent">&nbsp;</span>
+
+                                                                        <a id="FieldRules_1_Type_ShowHide" rev="ddShow"
+                                                                              class="dropdown SL_split dropdown_list_ShowHide"
+                                                                              onmousedown="showDropdown(event, this); return false;"
+                                                                              href="#">
+                                                                              <em
+                                                                                    class="positive SL_split">Enchaîne</em>
+                                                                        </a>
+
+                                                                        <a id="FieldRules_1_Setting" type="entryInfo"
+                                                                              rev="dd5"
+                                                                              class="dropdown warning SL_split dropdown_list_ShowHideFields"
+                                                                              onmousedown="showDropdown(event, this); return false;"
+                                                                              href="#" style="width:265px">
+                                                                              <span class="notranslate">Choisir la
+                                                                                    question chaînée</span>
+                                                                              <b class="notranslate">text</b>
+                                                                        </a>
+                                                                        .
+
+                                                                  </p>
+                                                            </td>
+                                                            <td class="actions SL_split">
+                                                                  <a href="#" class="dup" title="Duplicate"
+                                                                        onclick="duplicateFieldRule(this, '1'); return false;">+</a>
+                                                                  <a href="#" class="del" title="Delete"
+                                                                        onclick="deleteFieldRule(this, '1'); return false;">-</a>
+                                                            </td>
+                                                      </tr>
+                                                </table>
+                                          </li>
+                                          <li id="FieldRule_2" class=" ">
+                                                <table cellspacing="0">
+                                                      <tr>
+                                                            <td class="num">
+                                                                  <a class="index notranslate">2</a>
+                                                                  <a class="warning"
+                                                                        onclick="Lightbox.showUrl('', function(){}, 'error'); return false;">!</a>
+                                                                  <a class="choiceWarning"
+                                                                        onclick="Lightbox.showUrl('', function(){}, 'error'); return false;">!</a>
+                                                            </td>
+                                                            <td>
+                                                                  <p id="FieldRules_2_Condition_2_Condition">
+                                                                        Si
+                                                                        <a id="FieldRules_2_Condition_2_FieldName"
+                                                                              type="entryInfo" rev="dd15" href="#"
+                                                                              style="width:190px"
+                                                                              class="dropdown SL_split dropdown_list_Fields"
+                                                                              onmousedown="showDropdown(event, this); return false;">
+
+                                                                              <span class="notranslate">
+                                                                                    Choisir une question...
+                                                                              </span>
+
+                                                                              <b>
+                                                                                    <span
+                                                                                          class="notranslate">radio</span>
+                                                                              </b>
+                                                                        </a>
+
+                                                                        <a id="FieldRules_2_Condition_2_Filter"
+                                                                              rev="dd1"
+                                                                              class="dropdown SL_split dropdown_list_Conditions"
+                                                                              type="" href="#"
+                                                                              onmousedown="showDropdown(event, this); return false;">
+                                                                              <em class='positive'>est</em>
+                                                                        </a>
+
+                                                                        <span class="spanValue">
+                                                                              <input id="FieldRules_2_Condition_2_Value"
+                                                                                    name="FieldRules_2_Condition_2_Value"
+                                                                                    onmouseup="rb_update(this);"
+                                                                                    onkeyup="rb_update(this);"
+                                                                                    onchange="rb_update(this);"
+                                                                                    class="text value hide SL_split"
+                                                                                    type="text" value="Other" />
+
+                                                                              <img class="datepick"
+                                                                                    src="https://static.wufoo.com/images/icons/calendar.png"
+                                                                                    alt="radio" />
+
+                                                                              <a href="#" class="tooltip SL_split"
+                                                                                    title="Acceptable Date Formats"
+                                                                                    rel="In addition to entering the date using the datepicker or MM/DD/YYYY format, you can also use human readable relative date formats like 'Today', '-7 days', and 'last Monday' for this input.">
+                                                                                    Other Date Formats
+                                                                              </a>
+                                                                        </span>
+
+                                                                        <a id="FieldRules_2_Condition_2_ChoiceValue"
+                                                                              type="field15" rev="dd39"
+                                                                              onmousedown="showDropdown(event, this); return false;"
+                                                                              class="dropdown  SL_split dropdown_list_Choices"
+                                                                              href="#" style="width:152px">
+                                                                              <span class="notranslate">Autre</span>
+                                                                              <b class="notranslate">radio</b>
+                                                                        </a>
+
+                                                                        <em id="FieldRules_2_Condition_2_ChoiceCheckboxValue"
+                                                                              class="hide SL_split"
+                                                                              style="font-style:normal">
+                                                                              checked, &nbsp;
+                                                                        </em>
+                                                                  </p>
+                                                                  <br />
+
+                                                                  <p>
+                                                                        <span class="indent">&nbsp;</span>
+
+                                                                        <a id="FieldRules_2_Type_ShowHide" rev="ddShow"
+                                                                              class="dropdown SL_split dropdown_list_ShowHide"
+                                                                              onmousedown="showDropdown(event, this); return false;"
+                                                                              href="#">
+                                                                              <em
+                                                                                    class="positive SL_split">Enchaîne</em>
+                                                                        </a>
+
+                                                                        <a id="FieldRules_2_Setting" type="entryInfo"
+                                                                              rev="dd16"
+                                                                              class="dropdown warning SL_split dropdown_list_ShowHideFields"
+                                                                              onmousedown="showDropdown(event, this); return false;"
+                                                                              href="#" style="width:265px">
+                                                                              <span class="notranslate">Choisir la
+                                                                                    question chaînée</span>
+                                                                              <b class="notranslate">text</b>
+                                                                        </a>
+                                                                        .
+
+                                                                  </p>
+                                                            </td>
+                                                            <td class="actions SL_split">
+                                                                  <a href="#" class="dup" title="Duplicate"
+                                                                        onclick="duplicateFieldRule(this, '2'); return false;">+</a>
+                                                                  <a href="#" class="del" title="Delete"
+                                                                        onclick="deleteFieldRule(this, '2'); return false;">-</a>
+                                                            </td>
+                                                      </tr>
+                                                </table>
+                                          </li>
+                                    </ul>
+                                    <div class="buttons center">
+                                          <a id="AddFieldRuleBtn" class="button positive"
+                                                onclick="saveFieldRules(); return false;">
+                                                <img src="https://static.wufoo.com/images/icons/tick.png" alt="" />
+                                                Sauvegarder
+
+                                          </a>
+                                    </div>
+                              </div>
+                              <!-- #fieldRulesTop -->
+
+                        </div>
+                  </form>
+                  <!-- logicRules -->
+            </div>
+            <!--stage-->
+
+      </div>
+</body>
