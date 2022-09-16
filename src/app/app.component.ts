@@ -7,7 +7,7 @@ import { TokenIdentificationService } from './token-identification.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MNSgame_Angular';
+  title = 'MNS GAMES';
   public email: string = "";
 
   constructor(

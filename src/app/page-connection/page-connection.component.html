@@ -2,7 +2,7 @@
       <img class="logomns" src="assets/images/icons/logo_mnsGames.svg" alt="logo MNS">
       <div class="container" id="container">
             <div class="form-container sign-up-container">
-                  <form [formGroup]="signUpFormControl">
+                  <form [formGroup]="signUpFormControl" (submit)="onSignUp()">
                         <h1>Inscription</h1> <br>
                         <mat-form-field appearance="fill">
                               <input class="input_field" formControlName="lastname" type="text" placeholder="Nom"
@@ -41,7 +41,7 @@
                                     Le mot de passe doit avoir <strong>au moins 6 lettres</strong>
                               </mat-error>
                         </mat-form-field>
-                        <button>S'incrire</button>
+                        <button type="submit">S'inscrire</button>
                   </form>
             </div>
 

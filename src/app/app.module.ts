@@ -23,9 +23,15 @@ import { PageScenarioBuilderComponent } from './page-scenario-builder/page-scena
 import { PageQuestionsManagementComponent } from './page-questions-management/page-questions-management.component';
 import { PageThemesManagementComponent } from './page-themes-management/page-themes-management.component';
 import { PageGameManagementComponent } from './page-game-management/page-game-management.component';
+import { PageStartgameComponent } from './page-startgame/page-startgame.component';
+import { PageGameScoreComponent } from './page-game-score/page-game-score.component';
+import { PageGamesToPlayComponent } from './page-games-to-play/page-games-to-play.component';
+import { TokenIdentificationService } from './token-identification.service';
 
-@NgModule({
-  declarations: [
+@NgModule({  //A class decorator explains the purpose of the class, i.e.,
+  //whether a particular class is a component or module.
+  // The decorator allows us to define this purpose without putting any code inside the class.
+  declarations: [ // components, directives, and pipes that are part of this module
     AppComponent,
     PageConnectionComponent,
     PageUsersManagementComponent,
@@ -35,9 +41,13 @@ import { PageGameManagementComponent } from './page-game-management/page-game-ma
     PageScenarioBuilderComponent,
     PageQuestionsManagementComponent,
     PageThemesManagementComponent,
-    PageGameManagementComponent
+    PageGameManagementComponent,
+    PageStartgameComponent,
+    PageGameScoreComponent,
+    PageGamesToPlayComponent
   ],
-  imports: [
+  imports: [ // other modules, whose classes are needed by components
+    //of the module they are being imported into
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -54,7 +64,13 @@ import { PageGameManagementComponent } from './page-game-management/page-game-ma
     MatCheckboxModule,
     MatMenuModule
   ],
-  providers: [{ provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }],
+  //  services that are required by components
+  providers: [
+    // educative.io advice
+    TokenIdentificationService,
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }],
+  // the main component, or the root component, which starts the whole application.
+  //Only the root module (app.module.ts file) can have a bootstrap array.
   bootstrap: [AppComponent]
 })
 export class AppModule { }

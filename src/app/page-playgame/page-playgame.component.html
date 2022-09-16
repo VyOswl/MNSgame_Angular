@@ -1,18 +1,20 @@
 <main>
+      <img class="logomns" src="assets/images/icons/logo_mnsGames.svg" alt="logo MNS">
+      <h1>{{scenario.name}}</h1>
       <div id="container">
-            <div id="box">
-                  <h1>{{scenario.name}}</h1>
-                  <p>{{scenario.description}}</p>
+            <div id="questionContent">
+                  <p id="Q">{{question.content}}</p>
             </div>
-            <br>
-            <div id="menu">
-                  <button (click)="playGame()">
-                        <span class="jouer">JOUER</span>
-                  </button><br>
-
-                  <button (click)="return()">
-                        <span class="retour">RETOUR</span>
-                  </button><br>
+            <div id="answersContent">
+                  <div class="A" *ngFor="let answer of answers">
+                        <button class="buttonAnswer" type="button" (click)="selectAnswer(answer.id)">
+                              <span>{{answer.content}}</span>
+                        </button><br>
+                  </div>
+            </div>
+            <div id="validation">
+                  <button (click)="validate()">Question suivante</button>
             </div>
       </div>
+
 </main>

@@ -48,7 +48,7 @@ export class PageConnectionComponent implements OnInit {
     if (this.signInFormControl.valid) { //to check if the form is valid without sending it to the server
       const user = this.signInFormControl.value;
 
-      this.client.post('http://' + environment.serverAddress + '/connection', user)
+      this.client.post('https://' + environment.serverAddress + '/connection', user)
         .subscribe((response: any) => {
           if (response.erreur) {
             alert(response.erreur);
@@ -57,6 +57,19 @@ export class PageConnectionComponent implements OnInit {
             this.tokenIdentification.refreshToken()
             this.router.navigateByUrl('/admin/users-management');
           }
+        });
+    }
+  }
+
+  onSignUp() {
+    if (this.signUpFormControl.valid) { //to check if the form is valid without sending it to the server
+      const user = this.signUpFormControl.value;
+
+      this.client.post('https://' + environment.serverAddress + '/inscription', user)
+        .subscribe((response: any) => {
+          localStorage.setItem('token', response.token);
+          this.tokenIdentification.refreshToken()
+          this.router.navigateByUrl('/user/select-game');
         });
     }
   }

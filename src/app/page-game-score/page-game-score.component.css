@@ -13,13 +13,13 @@ main {
 
 .logomns {
       width: 500px;
-      margin-top: 1%;
+      margin-top: 15px;
       margin-bottom: 40px;
       z-index: 2;
 }
 
 h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-family: 'Montserrat';
       font-weight: normal;
       color: white;
@@ -28,40 +28,25 @@ h1 {
       margin-bottom: 20px;
 }
 
-#Q {
-      width: 800px;
-      height: 100px;
-      border-radius: 10px;
-      border: #E4522A solid;
-      background-color: #FFFFFF;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 18px;
+h2 {
+      font-size: 2rem;
       font-family: 'Poppins', sans-serif;
+      font-weight: normal;
+      color: rgb(4, 103, 118);
+      text-align: center;
+      margin-bottom: 18px;
 }
 
-#container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 65px;
-
+h3 {
+      font-size: 2rem;
+      font-family: 'Poppins';
+      font-weight: normal;
+      color: rgb(210, 198, 62);
+      text-align: center;
+      margin-bottom: 18px;
 }
 
-#answersContent {
-      margin-top: 50px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-}
-
-.A {
-      margin-right: 340px;
-}
-
-.buttonAnswer {
+.button {
       border-radius: 10px;
       border: 1px solid #E4522A;
       background-color: #FFFFFF;
@@ -82,16 +67,11 @@ h1 {
       height: 70px;
 }
 
-.buttonAnswer:active {
+.button:active {
       transform: scale(0.95);
 }
 
-.buttonAnswer:hover {
-      background-color: #FFFFFF
-}
-
-
-.buttonAnswer:focus {
+.button:focus {
       outline: none;
       border: 1px solid #FFFFFF;
       background-color: #E4522A;
@@ -101,12 +81,10 @@ h1 {
 button {
       border-radius: 0px;
       border: 1px solid #ffef16;
-      border-radius: 8px;
       background-color: #2aa9e4;
       color: #000000;
       font-size: 14px;
       font-weight: bold;
-      /* width: 110px; */
       padding: 10px 15px;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -115,23 +93,4 @@ button {
       position: absolute;
       z-index: 3;
       cursor: pointer;
-}
-
-/* button.ghost {
-    background-color: transparent;
-    border-color: #FFFFFF;
-} */
-
-#validation {
-      margin-top: 100px;
-      display: flex;
-      justify-content: center;
-}
-
-button:hover {
-      background-color: rgb(49, 204, 235)
-}
-
-button:active {
-      background-color: yellow
 }

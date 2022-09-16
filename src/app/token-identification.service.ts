@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 
-@Injectable({
+@Injectable({ // this class can be consumed/injected into components
   providedIn: 'root'
 })
 export class TokenIdentificationService {
